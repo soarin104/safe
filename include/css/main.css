@@ -1,0 +1,230 @@
+/* grade */
+.grade{
+	background: #f8f7f7;
+	box-sizing: border-box;
+	padding: 20px 5%;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.grade > div{
+	width: 30%;
+	text-align: center;
+}
+
+.grade > div .square{
+	border: 4px solid #5578e8;
+	border-radius: 15px;
+	padding: 25px;
+	margin-bottom: 30px;
+}
+
+.grade > div:nth-child(2) .square{
+	border-color: #25cfae;
+}
+
+.grade > div:nth-child(3) .square{
+	border-color: #e8ba2b;
+}
+
+.grade > div .square img{
+	display: inline-block;
+	margin-bottom: 15px;
+	max-width: 70px;
+}
+
+.grade > div .square h4{
+	font-size: 22px;
+	font-weight: 400;
+	margin-bottom: 10px;
+}
+
+.grade > div .square p{
+	width: 60%;
+	color: #fff;
+	background: #5578e8;
+	margin: auto;
+	font-weight: 600;
+	padding: 5px 0;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.grade > div:nth-child(2) .square p{
+	background: #25cfae;
+}
+
+.grade > div:nth-child(3) .square p{
+	background: #e8ba2b;
+}
+
+.grade ul{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.grade ul li{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 30%;
+}
+
+.grade ul li h6{
+	font-size: 14px;
+	white-space: nowrap;
+	font-weight: 500;
+	color: #494949;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.grade ul li span{
+	width: 100%;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	border-radius: 50%;
+	background: #e8ba2b;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.grade ul li:nth-child(2) span{
+	background: #ec831c;
+}
+
+.grade ul li:nth-child(3) span{
+	background: #00cd3f;
+}
+
+/* area */
+.area{
+	background: #f8f7f7;
+	box-sizing: border-box;
+	padding: 25px 5%;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.area > div{
+	width: 19%;
+	text-align: center;
+}
+
+.area > div .square{
+	border: 4px solid #5578e8;
+	border-radius: 15px;
+	padding: 15px 15px;
+}
+
+.area > div .square h4{
+	font-size: 16px;
+	font-weight: 400;
+	text-align: center;
+	line-height: 1.3;
+	margin-bottom: 20px;
+}
+
+.area > div .square p{
+	border-radius: 100px;
+	color: #fff;
+	width: 70%;
+	margin: auto;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 3px 0;
+}
+
+
+/* ---------------------------------------------------- 720px */
+@media screen and (max-width: 720px){
+
+.grade{
+	
+}
+
+.grade > div .square{
+	padding: 3vw 0;
+	margin-bottom: 3vw;
+}
+
+.grade > div .square img{
+	width: 60%;
+	margin: 0 auto 3vw;
+}
+
+.grade > div .square h4{
+	font-size: 3vw;
+}
+
+.grade > div .square p{
+	font-size: 4vw;
+}
+
+.grade ul{
+	flex-wrap: wrap;
+}
+
+.grade ul li{
+	width: 100%;
+	margin-bottom: 3vw;
+}
+
+.grade ul li:last-child{
+	margin-bottom: 0;
+}
+
+.grade ul li h6{
+	font-size: 3vw;
+	margin-bottom: 1vw;
+}
+
+/* area */
+.area{
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 5vw 5%;
+}
+
+.area > div{
+	width: calc(96%/3);
+	margin-right: 2%;
+	margin-bottom: 0;
+	margin-top: 2vw;
+}
+
+.area > div:nth-child(-n+3){
+	margin-top: 0;
+}
+
+.area > div:nth-child(3n),
+.area > div:last-child{
+	margin-right: 0;
+}
+
+.area > div .square{
+	margin-bottom: 0;
+}
+
+.area > div .square h4{
+	font-size: 3vw;
+	margin-bottom: 3vw;
+}
+
+.area > div .square p{
+	font-size: 3vw;
+	padding: 1vw 0;
+	width: 80%;
+}
+
+
+
+
+
+}

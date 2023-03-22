@@ -1,0 +1,681 @@
+/* mapBox */
+.mapBox{
+	width: 30%;
+}
+
+.mapBox h3{
+	display: flex;
+	justify-content: center;
+}
+
+.mapBox h3 img{
+	margin-right: 5px;
+}
+
+/* resultBox */
+.resultBox{
+	width: 65%;
+}
+
+.resultBox > ul{
+	display: flex;
+}
+
+.resultBox > ul li{
+	width: calc(100%/3);
+	text-align: center;
+	background: #e9e9e9;
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	border-radius: 15px 15px 0 0;
+	cursor: pointer;
+}
+
+.resultBox > ul li.on{
+	background: var(--mainCol);
+	color: #fff;
+}
+
+.resultBox article > div{
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.resultBox article > div.on{
+	opacity: 1;
+	position: relative;
+	z-index: 10;
+}
+
+/* r_model */
+.r_model .tb{
+	width: 100%;
+	position: relative;
+	top: 20px;
+	opacity: 0;
+	transition: all 0.4s;
+	transition-delay: 0.6s;
+}
+
+.r_model.on .tb{
+	top: 0;
+	opacity: 1;
+}
+
+.r_model .topBox{
+	background: #f8f7f7;
+	border-radius: 0 0 10px 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	padding: 30px 5%;
+}
+
+.r_model .topBox ul{
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	transition: all 0.4s;
+	opacity: 0;
+	top: 20px;
+}
+
+.r_model.on .topBox ul{
+	top: 0;
+	opacity: 1;
+}
+
+.r_model .topBox ul li{
+	width: 150px;
+	/* margin-right: calc(100%/3 - 600px/3); */
+	text-align: center;
+}
+
+.r_model .topBox ul li:last-child{
+	margin-right: 0;
+}
+
+.r_model .topBox ul li::after{
+	font-size: 40px;
+	display: inline-block;
+	position: absolute;
+	top: calc(50% + 24px);
+	transform: translate(-50%,-50%);
+}
+
+.r_model .topBox ul li:nth-child(1)::after{
+	content: '+';
+	left: calc(150px + 100%/6 - 600px/6);
+}
+
+.r_model .topBox ul li:nth-child(2)::after{
+	content: '-';
+	left: 50%;
+}
+
+.r_model .topBox ul li:nth-child(3)::after{
+	content: '=';
+	right: calc(150px + 100%/6 - 600px/6);
+	transform: translate(50%,-50%);
+}
+
+.r_model .topBox ul li h4{
+	font-size: 14px;
+	color: #fff;
+	background: #ccc;
+	border-radius: 100px;
+	padding: 5px 10px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.r_model .topBox ul li:nth-child(1) h4{
+	background: #e8ba2b;
+}
+
+.r_model .topBox ul li:nth-child(2) h4{
+	background: #ec831c;
+}
+
+.r_model .topBox ul li:nth-child(3) h4{
+	background: #00cd3f;
+}
+
+.r_model .topBox ul li:nth-child(4) h4{
+	background: #3f63d7;
+}
+
+.r_model .topBox ul li .circle{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 150px;
+	border: 5px solid #ccc;
+	border-radius: 50%;
+	box-sizing: border-box;
+}
+
+.r_model .topBox ul li:nth-child(1) .circle{
+	border-color: #e8ba2b;
+}
+
+.r_model .topBox ul li:nth-child(2) .circle{
+	border-color: #ec831c;
+}
+
+.r_model .topBox ul li:nth-child(3) .circle{
+	border-color: #00cd3f;
+}
+
+.r_model .topBox ul li:nth-child(4) .circle{
+	border-color: #3f63d7;
+	position: relative;
+}
+
+.r_model .topBox ul li:nth-child(4) .circle::after{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #3f63d7;
+	border-radius: 50%;
+	transform: translate(-50%,-50%) scale(1.2);
+}
+
+.r_model .topBox ul li .circle div{
+	width: 100%;
+}
+
+.r_model .topBox ul li .circle h5{
+	font-weight: 400;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
+.r_model .topBox ul li .circle p{
+	width: 35%;
+	text-align: center;
+	color: #fff;
+	padding: 5px 0px;
+	font-weight: 600;
+	background: #ccc;
+	margin: auto;
+	line-height: 1;
+	border-radius: 100px;
+}
+
+.r_model .topBox ul li:nth-child(1) .circle p{
+	background: #e8ba2b;
+}
+
+.r_model .topBox ul li:nth-child(2) .circle p{
+	background: #ec831c;
+}
+
+.r_model .topBox ul li:nth-child(3) .circle p{
+	background: #00cd3f;
+}
+
+.r_model .topBox ul li:nth-child(4) .circle p{
+	background: #3f63d7;
+}
+
+.r_model .topBox > h4{
+	width: 100%;
+	background: var(--mainCol);
+	color: #fff;
+	text-align: center;
+	padding: 10px 0;
+	border-radius: 10px;
+	margin: 20px auto 10px;
+	transition: all 0.4s;
+	transition-delay: 0.2s;
+	opacity: 0;
+	position: relative;
+	top: 20px;
+}
+
+.r_model.on .topBox > h4{
+	opacity: 1;
+	top: 0;
+}
+
+.r_model .topBox > p{
+	text-align: center;
+	font-weight: 600;
+	font-size: 16px;
+	transition: all 0.4s;
+	opacity: 0;
+	position: relative;
+	top: 20px;
+	transition-delay: 0.4s;
+}
+
+.r_model.on .topBox > p{
+	opacity: 1;
+	top: 0;
+}
+
+.r_model .topBox > p span{
+	display: block;
+	text-align: right;
+	margin-top: 10px;
+	font-size: 13px;
+	color: #5578e8;
+	line-height: 1.7;
+	font-weight: 300;
+}
+
+/* r_class */
+.r_class .graph{
+	background: #f8f7f7;
+	box-sizing: border-box;
+	padding: 30px;
+	border-radius: 10px;
+	transition: all 0.4s;
+	transform: translateY(20px);
+	opacity: 0;
+}
+
+.r_class.on .graph{
+	/* top: 0; */
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.r_class .graph1{
+	border-radius: 0 0 10px 10px;
+	margin-bottom: 15px;
+}
+
+.r_class .graph canvas{
+	width: 100% !important;
+	height: 12vw !important;
+}
+
+.r_class .graph .titBox{
+	display: flex;
+	align-items: center;
+}
+
+.r_class .graph .titBox h4{
+	color: #565656;
+	padding-left: 20px;
+	background: url(../img/graphTit.png) no-repeat center left / contain;
+}
+
+.r_class .graph .titBox ul{
+	display: flex;
+}
+
+.r_class .graph .titBox ul li{
+	display: flex;
+	align-items: center;
+	margin-left: 15px;
+}
+
+.r_class .graph .titBox ul li span{
+	width: 34px;
+	height: 14px;
+	box-sizing: border-box;
+	border: 1px solid #666;
+	background: rgba(0,0,0,0.2);
+	margin-right: 5px;
+}
+
+.r_class .graph .titBox ul li p{
+	font-size: 13px;
+	font-weight: 600;
+}
+
+/* r_table */
+.r_table{
+	box-sizing: border-box;
+	padding: 0 15px 30px;
+	background: #f8f7f7;
+	border-radius: 0 0 10px 10px;
+}
+
+.r_table .tbBox{
+	width: 100%;
+	position: relative;
+	opacity: 0;
+	top: 20px;
+	transition: all 0.4s;
+}
+
+.r_table.on .tbBox{
+	opacity: 1;
+	top: 0;
+}
+
+.r_table .tbBox h4{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1.5;
+	padding: 20px 0;
+	color: #565656;
+}
+
+.r_table table, 
+.r_table td, 
+.r_table th {
+  border : 1px solid #dadada;
+  border-collapse : collapse;
+  vertical-align: middle;
+}
+
+.r_table .tbBox table{
+	width: 100%;
+}
+
+.r_table .tbBox table th{
+	padding: 20px 0;
+	background: #e4e8eb;
+	font-weight: 500;
+	font-size: 14px;
+	color: #494949;
+}
+
+.r_table .tbBox table tr:nth-child(2) th:last-child{
+	border-top: 4px solid var(--mainCol);
+	border-right: 4px solid var(--mainCol);
+	border-left: 4px solid var(--mainCol);
+}
+
+.r_table .tbBox table td{
+	text-align: center;
+	padding: 25px 0;
+	font-size: 14px;
+}
+
+.r_table .tbBox table td:last-child{
+	border-right: 4px solid var(--mainCol);
+	border-left: 4px solid var(--mainCol);
+}
+
+.r_table .tbBox table tr:last-child td:last-child{
+	border-bottom: 4px solid var(--mainCol);
+}
+
+
+/* ------------------------------------------------------------ 1500px */
+@media screen and (max-width: 1500px){
+
+
+.resultBox > ul li{
+	font-size: 14px;
+}
+
+.r_model .topBox ul li{
+	width: 120px;
+}
+
+.r_model .topBox ul li h4{
+	font-size: 12px;
+}
+
+.r_model .topBox ul li .circle{
+	width: 120px;
+	height: 120px;
+}
+
+.r_model .topBox ul li .circle h5{
+	margin-bottom: 15px;
+	font-size: 14px;
+}
+
+.r_model .topBox ul li .circle p{
+	font-size: 14px;
+}
+
+.r_model .topBox ul li:nth-child(1)::after {
+    left: calc(120px + 100%/6 - 480px/6);
+}
+
+.r_model .topBox ul li:nth-child(3)::after {
+    right: calc(120px + 100%/6 - 480px/6);
+    transform: translate(50%,-50%);
+}
+
+.r_model .topBox > h4{
+	font-size: 14px;
+}
+
+.r_model .topBox > p{
+	font-size: 14px;
+}
+
+.r_model .topBox > p span{
+	font-size: 12px;
+}
+
+/*  */
+.r_class .graph .titBox h4{
+	font-size: 16px;
+}
+
+
+
+
+
+}
+
+
+
+
+/* ------------------------------------------------------------ 1200px */
+@media screen and (max-width: 1200px){
+
+/*  */
+.r_model .topBox ul li{
+	width: 100px;
+}
+
+.r_model .topBox ul li h4{
+	line-height: 1.4;
+}
+
+.r_model .topBox ul li .circle{
+	width: 100px;
+	height: 100px;
+}
+
+.r_model .topBox ul li::after{
+	font-size: 30px;
+}
+
+.r_model .topBox ul li:nth-child(1)::after {
+    left: calc(100px + 100%/6 - 400px/6);
+}
+
+.r_model .topBox ul li:nth-child(3)::after {
+    right: calc(100px + 100%/6 - 400px/6);
+    transform: translate(50%,-50%);
+}
+
+/*  */
+.r_class .graph .titBox h4{
+	font-size: 14px;
+}
+
+.r_class .graph .titBox ul li span{
+	width: 25px;
+	height: 13px;
+}
+
+.r_class .graph .titBox ul li p{
+	font-size: 12px;
+}
+
+/*  */
+.r_table .tbBox table th{
+	font-size: 12px;
+}
+
+.r_table .tbBox table td{
+	font-size: 12px;
+}
+
+
+
+}
+
+
+
+/* ------------------------------------------------------------ 720px */
+@media screen and (max-width: 720px){
+
+.mapBox{
+	width: 100%;
+	margin-bottom: 5vw;
+}
+
+.resultBox{
+	width: 100%;
+}
+
+.resultBox > ul li{
+	font-size: 2.5vw;
+}
+
+/*  */
+.r_model .topBox{
+	padding: 5vw 5%;
+}
+
+.r_model .topBox ul{
+	flex-wrap: wrap;
+	/* width: 50%; */
+	margin: auto;
+}
+
+.r_model .topBox ul li{
+	width: 14vw;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.r_model .topBox ul li::after{
+	font-size: 3vw;
+}
+
+.r_model .topBox ul li:nth-child(1)::after {
+    left: calc(14vw + 100%/6 - 56vw/6);
+}
+
+.r_model .topBox ul li:nth-child(3)::after {
+    right: calc(14vw + 100%/6 - 56vw/6);
+}
+
+.r_model .topBox ul li h4{
+	width: 100%;
+	height: 7vw;
+	line-height: 7vw;
+	font-size:2vw;
+	padding: 0;
+	margin-bottom: 3vw;
+}
+
+.r_model .topBox ul li .circle{
+	width: 14vw;
+	height: 14vw;
+	border-width: 2px;
+}
+
+.r_model .topBox ul li:nth-child(4) .circle::after{
+	transform: translate(-50%,-50%) scale(1.11);
+}
+
+.r_model .topBox ul li .circle h5{
+	font-size: 2.5vw;
+	margin-bottom: 1vw;
+}
+
+.r_model .topBox ul li .circle p{
+	font-size: 2vw;
+	width: 60%;
+	padding: 1vw 0;
+}
+
+.r_model .topBox > h4{
+	font-size: 3vw;
+}
+
+.r_model .topBox > p{
+	font-size: 3vw;
+	line-height: 1.4;
+}
+
+.r_model .topBox > p span{
+	font-size: 2.5vw;
+	margin-top: 1vw;
+}
+
+.r_model .tb{
+	min-width: 600px;
+}
+
+/*  */
+.r_class .graph .titBox{
+	flex-wrap: wrap;
+}
+
+.r_class .graph .titBox h4{
+	font-size: 3vw;
+	width: 100%;
+}
+
+.r_class .graph .titBox ul{
+	width: 100%;
+	margin-top: 2vw;
+}
+
+.r_class .graph .titBox ul li{
+	margin-left: 0;
+	margin-right: 2vw;
+}
+
+.r_class .graph .titBox ul li span{
+	width: 8vw;
+	height: 3vw;
+}
+
+.r_class .graph .titBox ul li p{
+	font-size: 2.5vw;
+}
+
+.r_class .graph canvas{
+	height: auto !important;
+}
+
+/* */
+.r_table .tbBox table{
+	min-width: 600px;
+}
+
+.r_table .tbBox table th{
+	padding: 3vw 0;
+	line-height: 1.3;
+	font-size: 2.5vw;
+}
+
+.r_table .tbBox table td{
+	padding: 3vw 0;
+	font-size: 2.5vw;
+}
+
+
+
+
+
+
+
+}
